@@ -14,7 +14,7 @@ class InputComponent : public MoveComponent
 {
 public:
 	// Lower update order to update first
-	InputComponent(class Actor* owner);
+	InputComponent(class Actor* owner,Vector2 velocityLimit,float mass);
 
 	void ProcessInput(const uint8_t* keyState) override;
 	

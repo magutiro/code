@@ -27,7 +27,7 @@ SpriteComponent::~SpriteComponent()
 
 void SpriteComponent::Draw(SDL_Renderer* renderer)
 {
-	if (mTexture)
+	if (mTexture && mOwner ->GetState() != mOwner ->EPaused)
 	{
 		SDL_Rect r;
 		// Scale the width/height by owner's scale
